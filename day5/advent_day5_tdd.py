@@ -1,6 +1,3 @@
-import unittest
-
-
 class Santa(object):
 
     def isNice(self, name):
@@ -43,26 +40,6 @@ class Santa(object):
         return False
 
 
-class TestCases(unittest.TestCase):
-
-    def test_NaughtyOrNice(self):
-        test = Santa()
-
-        self.assertTrue(test.isNice("ugknbfddgicrmopn"))
-        self.assertTrue(test.isNice("aaa"))
-        self.assertFalse(test.isNice("jchzalrnumimnmhp"))
-        self.assertFalse(test.isNice("haegwjzuvuyypxyu"))
-        self.assertFalse(test.isNice("dvszwmarrgswjxmb"))
-
-    def test_Naughtier(self):
-        test = Santa()
-
-        self.assertTrue(test.isNicer("qjhvhtzxzqqjkmpb"))
-        self.assertTrue(test.isNicer("xxyxx"))
-        self.assertFalse(test.isNicer("uurcxstgmygtbstg"))
-        self.assertFalse(test.isNicer("ieodomkazucvgmuy"))
-
-
 def main():
     check = Santa()
     nice = 0
@@ -81,5 +58,4 @@ def main():
     print("There are {0} nicer strings".format(nicer))
 
 if __name__ == "__main__":
-    # unittest.main()
     main()
