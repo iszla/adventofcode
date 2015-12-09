@@ -1,3 +1,5 @@
+# Solution stolen from:
+# https://www.reddit.com/r/adventofcode/comments/3w192e/day_9_solutions/cxsix3u
 import sys
 from itertools import permutations
 
