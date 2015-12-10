@@ -20,9 +20,10 @@ class Santa(object):
 
 
 def main():
-    output = Santa().lookAndSay("1113222113", 50)
+    output = Santa().lookAndSay("1113222113", 40)
+    output2 = Santa().lookAndSay(output, 10)
 
-    print("{}".format(len(output)))
+    print("First: {} Second: {}".format(len(output), len(output2)))
 
 if __name__ == "__main__":
     main()
