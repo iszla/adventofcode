@@ -24,15 +24,13 @@ class Santa(object):
                 return cString
             cString = list(cString[::-1])
 
-        self.generate(cString)
-
     def getNextChar(self, char):
         char = str(char)
         number = self.num[char]
         if number == 25:
             return self.alpha[0]
-        else:
-            return self.alpha[number+1]
+
+        return self.alpha[number+1]
 
     def validate(self, string):
         doubles = set()
@@ -41,7 +39,7 @@ class Santa(object):
         if any(l in string for l in ["i", "o", "l"]):
             return False
 
-        for x in range(0, len(string)):
+        for x in range(len(string)):
             if x < len(string) - 2:
                 if string[x:x+3] in self.fullAlpha:
                     rise = True
